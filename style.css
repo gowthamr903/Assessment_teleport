@@ -1,0 +1,289 @@
+.ball {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    /* background: url('http://hop.ie/balls/images/world-map-one-color.png') repeat-x; */
+    /* background: url('images/material4.jpg') repeat-x; */
+    background-size: auto 100%;
+    /* -webkit-animation: move-map 30s infinite linear;
+    -moz-animation: move-map 30s infinite linear;
+    -o-animation: move-map 30s infinite linear;
+    -ms-animation: move-map 30s infinite linear; */
+    animation: move-map 0s infinite linear;
+
+}
+
+.ball:hover {
+    animation: move-map 5s infinite linear;
+}
+
+.ball.active {
+    border: 5px solid white;
+}
+
+.ball:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: -40px 10px 70px 10px rgba(0, 0, 0, 0.5) inset;
+    z-index: 2;
+}
+
+.ball:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(0);
+    opacity: 0.3;
+    background: radial-gradient(circle at 50% 80%, #81e8f6, #76deef 10%, #055194 66%, #062745 100%);
+}
+
+.ball_1 {
+    background: url('http://hop.ie/balls/images/world-map-one-color.png') repeat-x !important;
+}
+
+
+
+/* .ball .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    -webkit-transform: rotateX(90deg) translateZ(-150px);
+    -moz-transform: rotateX(90deg) translateZ(-150px);
+    -ms-transform: rotateX(90deg) translateZ(-150px);
+    -o-transform: rotateX(90deg) translateZ(-150px);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+} */
+
+body {
+    width: 300px;
+    margin: 20px auto;
+    background: linear-gradient(to bottom, rgba(100, 100, 100, 0.2) 0%, rgba(255, 255, 255, 0.5) 40%, #ffffff 100%);
+    background-repeat: no-repeat;
+}
+
+.stage {
+    width: 100%;
+    height: 300px;
+    display: inline-block;
+    margin: 20px;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    -o-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+}
+
+@-moz-keyframes move-map {
+    0% {
+        background-position: -849px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-webkit-keyframes move-map {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -849px 0;
+    }
+}
+
+
+@-o-keyframes move-map {
+    0% {
+        background-position: -849px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-ms-keyframes move-map {
+    0% {
+        background-position: -849px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes move-map {
+    0% {
+        background-position: -849px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+</style>
+
+<style>
+/* crops animations that exceeds one line area */
+.line {
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+    border: 1px solid black;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+/* lineup class and keyframes */
+.lineUp {
+    animation: 2s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:900');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+
+
+}
+
+span {
+    color: #05b7b7;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+    position: absolute;
+    z-index: 1;
+    padding-left: 3rem;
+    padding-top: 4rem;
+}
+
+
+.container p {
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 1;
+    padding-left: 3.2rem;
+    padding-top: 13rem;
+}
+
+.img-overlay {
+    width: 100vw;
+    height: 100vh;
+    background: indigo;
+    opacity: .7;
+    position: absolute;
+}
+
+.hrline {
+    width: 484px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    margin: 176px 53px 20px;
+}
+
+
+.material_gallery {
+    width: 100%;
+    display: inline-flex;
+}
+
+.material_gallery figure {
+    display: inline-block;
+    width: 10%;
+    min-height: 145px;
+    margin-right: 45px;
+}
+
+
+.pulse_effect {
+    animation: pulse 0.7s;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.897);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
